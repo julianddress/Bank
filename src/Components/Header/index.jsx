@@ -1,9 +1,9 @@
 import React from "react";
+import styled from "styled-components"
 import logo from "../../assets/images/logo.svg";
 import { colorPrimario } from "../UI/variables";
-import styled from "styled-components";
 
-const StyledHeader= styled.nav`
+const StyledHeader = styled.nav`
   background-color: ${colorPrimario};
   display: flex;
   justify-content: space-between;
@@ -18,15 +18,16 @@ const Logo = styled.img`
 `
 
 const BtnHeader = styled.a`
-  text-align: center;
-  border-radius: 3px;
-  padding: 5px 20px;
-  margin: 0 10px;
-  font-weight: 600;
-  border: 2px solid white;
-  color: ${(props) => props.primary ? 'white' : '#41d3be' };
-  background: ${(props) => props.primary ? 'transparent' : 'white' };
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px 20px;
+    margin: 0 10px;
+    font-weight: 600;
+    border: 2px solid white;
+    color: ${ ({primary}) => primary ? "white" : colorPrimario };
+    background: ${ (props) => props.primary ? "transparent" : "white" };
 `
+
 
 const Header = () => {
   return (
